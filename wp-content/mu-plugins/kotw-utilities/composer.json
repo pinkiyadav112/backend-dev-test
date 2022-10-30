@@ -1,0 +1,12 @@
+{
+  "name": "kotw/kotw-utilities",
+  "description": "Utilities Plugin by KOTW",
+  "keywords": ["plugin", "wordpress", "kotw", "kotw-utilities"],
+  "type": "wordpress-muplugin",
+  "homepage": "https://github.com/kingsoftheweb/kotw-utilities",
+  "license": "",
+  "repositories": [{
+    "type": "composer",
+    "url": "https://wpackagist.org"
+  }]
+}

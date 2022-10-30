@@ -1,0 +1,5 @@
+# IDE files and folders
+.idea
+.vscode
+.DS_Store
+vendor/

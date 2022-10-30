@@ -1,0 +1,12 @@
+{
+  "name": "kotw/kotw-acf-pro",
+  "description": "Kotw ACF Pro",
+  "keywords": ["plugin", "wordpress", "kotw"],
+  "type": "wordpress-plugin",
+  "homepage": "https://github.com/Kings-Of-The-Web/kotw-acf-pro",
+  "license": "",
+  "repositories": [{
+    "type": "composer",
+    "url": "https://wpackagist.org"
+  }]
+}

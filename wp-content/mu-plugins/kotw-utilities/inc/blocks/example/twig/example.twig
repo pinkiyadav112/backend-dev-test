@@ -1,0 +1,26 @@
+{#
+/**
+ * Block Name: Block block
+ *
+ * This is the template that displays the example block.
+ */
+#}
+
+
+{% if is_preview %}
+    <strong>Click me, to edit!</strong>
+{% endif %}
+
+<div id="{{ block.id }}" class="kotw-blocks__wrapper {{ block.class }}" data-state="{}">
+    <h3>{{ fields.title }}</h3>
+    <h4>This is the custom variable added from the context: <span>{{ customContextVariable }}</span></h4>
+    <ul class="drinks">
+        {% for row in fields.items %}
+            <li class="drink">{{ row.item }}</li>
+        {% endfor %}
+    </ul>
+    <div class="drinkName">
+        <p>The name of the drink is: <span></span></p>
+    </div>
+</div>
+
