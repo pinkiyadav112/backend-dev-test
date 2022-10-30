@@ -13,7 +13,7 @@ This is to test how well versed you are with ACF and REST APIs, and to get a bet
 6. Go to https://backend-dev.lndo.site/wp-admin and login with the following credentials:
     - Username: `superadmin`
     - Password: `superadmin`
-7. Create a new post type : `Books` using KotwRest\Wordpress\PostTypes (you have to follow the current structure of the theme).
+7. Create a new post type : `Books` using KotwRest\Wordpress\PostTypes (you have to follow the current structure of the theme). _*Pay attention to the namespace._
 8. Add new ACF group : `Books Fields` with the following fields:
     - Title (Text)
     - Author (Text)
