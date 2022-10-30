@@ -32,6 +32,16 @@ class Taxonomies {
 			array(),
 			'Projects Groups'
 		);
-
+		// book
+		$book_taxonomy = new Taxonomy(
+			'book-category',
+			'Book Category',
+			'Book Categories',
+			array( 'book' ),
+			true,
+			true,
+			array(),
+			'Book Categories'
+		);
 	}
 }

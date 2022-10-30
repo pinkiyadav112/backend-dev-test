@@ -40,6 +40,23 @@ class PostTypes {
 			array(),
 			'Projects'
 		);
-
+		// book
+		$book_post_type = new PostType( 
+			'book',
+			'Book',
+			'Books',
+			array( 'book-category' ),
+			array(
+				'title',
+				'thumbnail',
+				'editor',
+				'excerpt',
+				'revisions',
+			),
+			'dashicons-book',
+			true,
+			array(),
+			'Books'
+		);
 	}
 }
