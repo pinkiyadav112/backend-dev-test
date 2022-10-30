@@ -1,0 +1,43 @@
+{
+    "packages": [
+        {
+            "name": "kotw/kotw-wp",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Kings-Of-The-Web/kotw-wp.git",
+                "reference": "d1d00fa6e7d0f4a12d7541d52bf1864afc87f629"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kings-Of-The-Web/kotw-wp/zipball/d1d00fa6e7d0f4a12d7541d52bf1864afc87f629",
+                "reference": "d1d00fa6e7d0f4a12d7541d52bf1864afc87f629",
+                "shasum": ""
+            },
+            "time": "2022-10-25T15:31:02+00:00",
+            "default-branch": true,
+            "type": "wordpress-muplugin",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "KotwWp\\": "src/lib"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Kings Of The Web",
+                    "email": "kingsofthewebofficial@gmail.com"
+                }
+            ],
+            "description": "This provides WordPress website with the kotw PHP based library's functions.",
+            "support": {
+                "source": "https://github.com/Kings-Of-The-Web/kotw-wp/tree/master",
+                "issues": "https://github.com/Kings-Of-The-Web/kotw-wp/issues"
+            },
+            "install-path": "../kotw/kotw-wp"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}

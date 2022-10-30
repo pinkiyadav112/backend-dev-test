@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright (c) 2022. Property of Kings Of The Web
+  -->
+
+<ruleset name="KOTW">
+
+    <description>A custom set of rules to check for a KOTW WordPress sites</description>
+
+    <!-- Exclude WP Core folders and files from being checked. -->
+    <exclude-pattern>/docroot/wp-admin/*</exclude-pattern>
+    <exclude-pattern>/docroot/wp-includes/*</exclude-pattern>
+    <exclude-pattern>/docroot/wp-*.php</exclude-pattern>
+    <exclude-pattern>/docroot/index.php</exclude-pattern>
+    <exclude-pattern>/docroot/xmlrpc.php</exclude-pattern>
+    <exclude-pattern>/docroot/wp-content/plugins/*</exclude-pattern>
+
+    <!-- Exclude the Composer Vendor directory. -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+
+    <!-- Exclude the Node Modules directory. -->
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+
+    <!-- Exclude minified Javascript files. -->
+    <exclude-pattern>*.min.js</exclude-pattern>
+
+    <!-- Exclude Javascript files. -->
+    <exclude-pattern>*.js</exclude-pattern>
+
+    <!-- Exclude sccs files. -->
+    <exclude-pattern>*.scss</exclude-pattern>
+
+    <!-- Exclude css files. -->
+    <exclude-pattern>*.min.css</exclude-pattern>
+
+    <!-- Exclude css files. -->
+    <exclude-pattern>*.css</exclude-pattern>
+
+    <!-- Include the WordPress-Extra standard. -->
+    <rule ref="WordPress-Extra">
+        <!--
+        We may want a middle ground though. The best way to do this is add the
+        entire ruleset, then rule by rule, remove ones that don't suit a project.
+        We can do this by running `phpcs` with the '-s' flag, which allows us to
+        see the names of the sniffs reporting errors.
+        Once we know the sniff names, we can opt to exclude sniffs which don't
+        suit our project like so.
+
+        The below two examples just show how you can exclude rules.
+        They are not intended as advice about which sniffs to exclude.
+        -->
+
+        <!--
+        <exclude name="WordPress.WhiteSpace.ControlStructureSpacing"/>
+        <exclude name="WordPress.Security.EscapeOutput"/>
+        -->
+
+        <!-- PSR4 -->
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase"/>
+
+        <!-- This rule is not needed, as it is not considered very readable -->
+        <exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
+
+        <!-- This rule is impossible to follow all the time -->
+        <exclude name="WordPress.NamingConventions.PrefixAllGlobals"/>
+
+        <!-- This rule does not help very much when there is some code
+             commented out as an example to follow in the future -->
+        <exclude name="Squiz.PHP.CommentedOutCode.Found"/>
+
+    </rule>
+
+    <!-- nested levels of the code is to maximum 3, read more about "Cyclomatic Complexity for WordPress and PHP" -->
+    <rule ref="Generic.Metrics.NestingLevel">
+        <properties>
+            <property name="absoluteNestingLevel" value="4"/>
+        </properties>
+    </rule>
+
+    <!-- Let's also check that everything is properly documented. -->
+    <!--    <rule ref="WordPress-Docs"/>-->
+
+
+    <!-- Check for PHP cross-version compatibility. -->
+    <!--
+    To enable this, the PHPCompatibilityWP standard needs
+    to be installed.
+    See the readme for installation instructions:
+    https://github.com/PHPCompatibility/PHPCompatibilityWP
+    For more information, also see:
+    https://github.com/PHPCompatibility/PHPCompatibility
+    -->
+    <!--
+    <config name="testVersion" value="5.2-"/>
+    <rule ref="PHPCompatibilityWP"/>
+    -->
+
+    <!--
+    To get the optimal benefits of using WPCS, we should add a couple of
+    custom properties.
+    Adjust the values of these properties to fit our needs.
+
+    For information on additional custom properties available, check out
+    the wiki:
+    https://github.com/WordPress/WordPress-Coding-Standards/wiki/Customizable-sniff-properties
+    -->
+    <config name="minimum_supported_wp_version" value="4.9"/>
+
+    <!-- Temporarily deacivating this till we include the multilingual system -->
+    <!--    <rule ref="WordPress.WP.I18n">-->
+    <!--        <properties>-->
+    <!--            <property name="text_domain" type="array">-->
+    <!--                <element value="my-textdomain"/>-->
+    <!--                <element value="library-textdomain"/>-->
+    <!--            </property>-->
+    <!--        </properties>-->
+    <!--    </rule>-->
+
+</ruleset>

@@ -1,0 +1,18 @@
+{
+    "name": "kotw/kotw-wp",
+    "description": "This provides WordPress website with the kotw PHP based library's functions.",
+    "type": "wordpress-muplugin",
+    "autoload": {
+        "psr-4": {
+            "KotwWp\\": "src/lib"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kings Of The Web",
+            "email": "kingsofthewebofficial@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

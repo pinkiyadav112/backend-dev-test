@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "5f35595e396048fabf7af70d9e9e9cc8",
+    "packages": [
+        {
+            "name": "kotw/kotw-wp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:Kings-Of-The-Web/kotw-wp.git",
+                "reference": "d1d00fa6e7d0f4a12d7541d52bf1864afc87f629"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Kings-Of-The-Web/kotw-wp/zipball/d1d00fa6e7d0f4a12d7541d52bf1864afc87f629",
+                "reference": "d1d00fa6e7d0f4a12d7541d52bf1864afc87f629",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "wordpress-muplugin",
+            "autoload": {
+                "psr-4": {
+                    "KotwWp\\": "src/lib"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Kings Of The Web",
+                    "email": "kingsofthewebofficial@gmail.com"
+                }
+            ],
+            "description": "This provides WordPress website with the kotw PHP based library's functions.",
+            "support": {
+                "source": "https://github.com/Kings-Of-The-Web/kotw-wp/tree/master",
+                "issues": "https://github.com/Kings-Of-The-Web/kotw-wp/issues"
+            },
+            "time": "2022-10-25T15:31:02+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "kotw/kotw-wp": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.3.0"
+}

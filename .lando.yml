@@ -1,0 +1,4 @@
+name: my-first-wordpress-app
+recipe: wordpress
+config:
+  webroot: wordpress

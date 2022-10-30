@@ -1,0 +1,24 @@
+{
+    "name": "kotw/kotw-rest",
+    "description": "Official Kotw WP theme to provide headless support for WordPress over REST API.",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Kings Of The Web",
+            "email": "kingsofthewebofficial@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:Kings-Of-The-Web/kotw-wp.git"
+        }
+    ],
+    "require": {
+        "kotw/kotw-wp": "dev-master"
+    }
+}
