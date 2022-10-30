@@ -5,4 +5,8 @@ config:
   via: nginx
   database: mysql:8.0
 
-
+tooling:
+  build:
+    description: Manually invokes all our build steps
+    cmd:
+      - appserver: sh /app/.kotw/build.sh
