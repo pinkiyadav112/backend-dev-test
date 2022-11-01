@@ -61,7 +61,7 @@ class Register extends Endpoint {
 	 *
 	 * @return array|WP_REST_Response
 	 */
-	public static function callback( WP_REST_Request $request ): WP_REST_Response|array {
+	public static function callback( WP_REST_Request $request ) {
 
 		$email    = $request->get_param( 'email' );
 		$password = $request->get_param( 'password' );

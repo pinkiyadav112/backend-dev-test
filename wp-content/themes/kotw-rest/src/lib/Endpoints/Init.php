@@ -18,6 +18,8 @@ use KotwRest\Endpoints\User\IsLogged as IsLoggedEndpoint;
 use KotwRest\Endpoints\User\Register as RegisterEndpoint;
 use KotwRest\Endpoints\User\Profile as GetUserProfileEndpoint;
 use KotwRest\Endpoints\Pages\GetPage as GetPageEndpoint;
+use KotwRest\Endpoints\Books\GetBook as GetBookEndpoint;
+
 
 class Init {
 
@@ -26,6 +28,7 @@ class Init {
 		self::register_user_endpoints();
 		self::register_content_endpoints();
 		self::register_services_endpoints();
+		self::register_book_endpoints();
 	}
 
 	/**
@@ -40,6 +43,16 @@ class Init {
 			array(
 				AvailableEndpoints::init(),
 				GetSiteOptionsEndpoint::init(),
+			)
+		);
+
+	}
+	
+	// for book endpoints
+	public static function register_book_endpoints(): void {
+		new RegisterEndpoints(
+			array(
+				GetBookEndpoint::init(),
 			)
 		);
 

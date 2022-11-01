@@ -14,6 +14,7 @@ class PostTypes {
 
 	public function __construct() {
 		self::register();
+		self::books();
 	}
 
 	/**
@@ -42,4 +43,30 @@ class PostTypes {
 		);
 
 	}
+	
+	
+	public static function books() {
+		// example
+		$example_post_type = new PostType(
+			'books',
+			'books',
+			'books',
+			array( 'books-category' ),
+			array(
+				'title',
+				'thumbnail',
+				'editor',
+				'excerpt',
+				'revisions',
+			),
+			'dashicons-welcome-learn-more',
+			true,
+			array(),
+			'books'
+		);
+
+	}
+	
+	
+	
 }

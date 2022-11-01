@@ -1,0 +1,19 @@
+[01/11/2022 06:47:16][122.160.42.62][$errors]: Array
+(
+    [verify_real_password] => Array
+        (
+            [0] => User does not exist.
+        )
+
+)
+
+[01/11/2022 06:47:16][122.160.42.62][$errors]: Array
+(
+    [verify_real_password] => Array
+        (
+            [0] => User does not exist.
+            [1] => <strong>Error</strong>: The username <strong>sdsdsd</strong> is not registered on this site. If you are unsure of your username, try your email address instead.
+        )
+
+)
+

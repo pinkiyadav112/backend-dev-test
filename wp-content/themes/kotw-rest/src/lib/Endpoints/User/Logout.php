@@ -61,7 +61,7 @@ class Logout extends Endpoint {
 	 *
 	 * @return WP_REST_Response|array
 	 */
-	public static function callback( WP_REST_Request $request ): WP_REST_Response|array {
+	public static function callback( WP_REST_Request $request ){
 		$user_id = $request->get_param( 'user_id' );
 		$user    = get_user_by( 'id', $user_id );
 		if ( ! $user instanceof WP_User ) {
